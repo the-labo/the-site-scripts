@@ -1,11 +1,12 @@
 'use strict'
 
-const { lib } = require('the-templates')
+const {dir} = require('the-templates')
 const pkg = require('../package.json')
 
-module.exports = lib({
+module.exports = dir({
   dirname: __dirname,
-  pkg
+  name: pkg.name,
+  desc: pkg.description
 })
 
 if (!module.parent) {
