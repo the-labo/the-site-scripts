@@ -6,8 +6,8 @@
 import React from 'react'
 
 const TheGTagScript = function TheGTagScriptImpl ({
-                                          trackingId
-                                        }) {
+                                                    trackingId
+                                                  }) {
   return [
     <script key='s1'
             async
@@ -20,7 +20,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', '${trackingId}');
+gtag('config', '${trackingId}', {'send_page_view': false});
 `
             }}>
     </script>
