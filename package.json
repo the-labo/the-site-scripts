@@ -1,0 +1,58 @@
+{
+  "name": "the-site-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for the-sites",
+  "main": "shim",
+  "scripts": {
+    "build": "the-script-build",
+    "doc": "the-script-doc",
+    "prepare": "the-script-build && the-script-doc",
+    "release": "the-script-release -y",
+    "share": "the-script-share",
+    "test": "the-script-test",
+    "update": "the-script-update",
+    "watch": "the-script-build -w"
+  },
+  "repository": "the-labo/the-site-scripts",
+  "keywords": [
+    "the",
+    "react-component"
+  ],
+  "author": {
+    "name": "okunishinishi",
+    "email": "okunishinishi@gmail.com",
+    "url": "undefined"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/the-labo/the-site-scripts/issues"
+  },
+  "homepage": "https://github.com/the-labo/the-site-scripts#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
+    "the-component-util": "^2.0.0",
+    "the-style": "^2.0.0"
+  },
+  "devDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
+    "the-component-demo": "^3.0.4",
+    "the-script-build": "^2.0.0",
+    "the-script-doc": "^1.0.2",
+    "the-script-release": "^1.0.6",
+    "the-script-share": "^1.0.5",
+    "the-script-test": "^2.0.1",
+    "the-script-update": "^1.0.0",
+    "the-templates": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=4"
+  }
+}
