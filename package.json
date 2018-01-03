@@ -1,6 +1,6 @@
 {
   "name": "the-site-scripts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Scripts for the-sites",
   "main": "shim",
   "scripts": {
