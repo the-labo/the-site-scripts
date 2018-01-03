@@ -8,7 +8,6 @@
 import TheFBScript from './TheFBScript'
 import TheGTagScript from './TheGTagScript'
 
-export default TheSiteScripts
 
 export {
   TheFBScript,
