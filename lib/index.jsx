@@ -11,3 +11,8 @@ export {
   TheFBScript,
   TheGTagScript
 }
+
+export default {
+    TheFBScript,
+    TheGTagScript
+}

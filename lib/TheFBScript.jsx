@@ -6,11 +6,14 @@
 import React from 'react'
 
 const TheFBScript = function TheFBScriptImpl ({
-                                          appId,
-                                          version = 'v2.11',
-                                          locale = 'en_US',
-                                          callbackName = 'withFB'
-                                        }) {
+                                                appId,
+                                                version = 'v2.11',
+                                                locale = 'en_US',
+                                                callbackName = 'withFB'
+                                              }) {
+  if (!appId) {
+    throw new Error(`appId is required`)
+  }
   return [
     <script key='s1'
             dangerouslySetInnerHTML={{
