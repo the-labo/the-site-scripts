@@ -3,5 +3,10 @@
     "description": "",
     "displayName": "TheAMZAdScript",
     "methods": []
+  },
+  "TheTWTTRScript": {
+    "description": "",
+    "displayName": "TheTWTTRScript",
+    "methods": []
   }
 }
