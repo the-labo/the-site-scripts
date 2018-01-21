@@ -1,7 +1,6 @@
 'use strict'
 
 import React from 'react'
-import { GlobalKeys } from '@self/conf'
 
 function TheAMZAdScript ({
                            type,
