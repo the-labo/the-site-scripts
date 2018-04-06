@@ -17,6 +17,7 @@
     "the-style": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.0.0-beta.44",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-router-dom": "^4.2.2",
