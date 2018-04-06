@@ -7,16 +7,15 @@ import React from 'react'
 
 const TheFBScript = function TheFBScriptImpl ({
                                                 appId,
-                                                version = 'v2.11',
+                                                callbackName = 'withFB',
                                                 locale = 'en_US',
-                                                callbackName = 'withFB'
+                                                version = 'v2.11',
                                               }) {
   if (!appId) {
     throw new Error(`appId is required`)
   }
   return [
-    <script key='s1'
-            dangerouslySetInnerHTML={{
+    <script dangerouslySetInnerHTML={{
               __html: `
 function withFBImpl (callback) {
   if(withFBImpl.loaded){
@@ -50,8 +49,10 @@ window['${callbackName}'] = withFBImpl;
   js.src = 'https://connect.facebook.net/${locale}/sdk.js';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-`
-            }}/>
+`,
+            }}
+            defer
+            key='s1'/>
   ]
 }
 

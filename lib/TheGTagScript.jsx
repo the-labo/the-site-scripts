@@ -6,23 +6,23 @@
 import React from 'react'
 
 const TheGTagScript = function TheGTagScriptImpl ({
-                                                    trackingId
+                                                    trackingId,
                                                   }) {
   return [
-    <script key='s1'
-            async
+    <script async
+            key='s1'
             src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}>
     </script>,
-    <script key='s2'
-            dangerouslySetInnerHTML={{
+    <script dangerouslySetInnerHTML={{
               __html: `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', '${trackingId}', {'send_page_view': false});
-`
-            }}>
+`,
+            }}
+            key='s2'>
     </script>
   ]
 }

@@ -25,7 +25,7 @@ function TheTWTTRScript ({}) {
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
-`
+`,
     }}>
 
     </div>
