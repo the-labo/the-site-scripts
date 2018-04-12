@@ -51,7 +51,6 @@ window['${callbackName}'] = withFBImpl;
 }(document, 'script', 'facebook-jssdk'));
 `,
             }}
-            defer
             key='s1'/>
   ]
 }
