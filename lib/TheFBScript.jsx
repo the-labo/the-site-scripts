@@ -41,14 +41,16 @@ window.fbAsyncInit = function fbAsyncInitImpl() {
 };
 window['${callbackName}'] = withFBImpl;
 
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.async = 1
-  js.src = 'https://connect.facebook.net/${locale}/sdk.js';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+setTimeout(function () {
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.async = 1
+    js.src = 'https://connect.facebook.net/${locale}/sdk.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+}, 100);
 `,
             }}
             key='s1'/>
