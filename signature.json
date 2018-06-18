@@ -4,6 +4,21 @@
     "displayName": "TheAMZAdScript",
     "methods": []
   },
+  "TheFBScript": {
+    "description": "",
+    "displayName": "TheFBScript",
+    "methods": []
+  },
+  "TheGTagScript": {
+    "description": "",
+    "displayName": "TheGTagScript",
+    "methods": []
+  },
+  "TheLineScript": {
+    "description": "",
+    "displayName": "TheLineScript",
+    "methods": []
+  },
   "TheTWTTRScript": {
     "description": "",
     "displayName": "TheTWTTRScript",
