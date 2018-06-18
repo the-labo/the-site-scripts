@@ -2,17 +2,20 @@
 
 import React from 'react'
 
-function TheAMZAdScript ({
-                           region,
-                           trackingId,
-                           type,
-                         }) {
-  const Script = TheAMZAdScript[type]
-  if (!Script) {
-    console.warn('[TheAMZAdScript]Unknown type', type)
-    return null
+class TheAMZAdScript extends React.Component {
+  render () {
+    const {
+      region,
+      trackingId,
+      type,
+    } = this.props
+    const Script = TheAMZAdScript[type]
+    if (!Script) {
+      console.warn('[TheAMZAdScript]Unknown type', type)
+      return null
+    }
+    return <Script {...{region, trackingId}} />
   }
-  return <Script {...{region, trackingId}} />
 }
 
 Object.assign(TheAMZAdScript, {
@@ -22,7 +25,7 @@ Object.assign(TheAMZAdScript, {
                 }) {
     return [
       <script dangerouslySetInnerHTML={{
-                __html: `
+        __html: `
 amzn_assoc_ad_type ="responsive_search_widget";
 amzn_assoc_tracking_id ="${trackingId}";
 amzn_assoc_marketplace ="amazon";
@@ -34,7 +37,7 @@ amzn_assoc_height ="auto";
 amzn_assoc_default_search_category ="";
 amzn_assoc_default_search_key ="";
 amzn_assoc_theme ="light";amzn_assoc_bg_color ="FFFFFF";`,
-              }}
+      }}
               key='s1'>
       </script>,
       <script async

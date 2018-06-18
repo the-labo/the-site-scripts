@@ -5,10 +5,11 @@
 
 import React from 'react'
 
-function TheTWTTRScript ({}) {
-  return (
-    <div dangerouslySetInnerHTML={{
-      __html: `
+class TheTWTTRScript extends React.Component {
+  render () {
+    return (
+      <div dangerouslySetInnerHTML={{
+        __html: `
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
@@ -26,10 +27,11 @@ function TheTWTTRScript ({}) {
   return t;
 }(document, "script", "twitter-wjs"));</script>
 `,
-    }}>
+      }}>
 
-    </div>
-  )
+      </div>
+    )
+  }
 }
 
 export default TheTWTTRScript

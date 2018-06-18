@@ -5,18 +5,20 @@
 
 import React from 'react'
 
-const TheFBScript = function TheFBScriptImpl ({
-                                                appId,
-                                                callbackName = 'withFB',
-                                                locale = 'en_US',
-                                                version = 'v2.11',
-                                              }) {
-  if (!appId) {
-    throw new Error(`appId is required`)
-  }
-  return [
-    <script dangerouslySetInnerHTML={{
-              __html: `
+class TheFBScript extends React.Component {
+  render () {
+    const {
+      appId,
+      callbackName = 'withFB',
+      locale = 'en_US',
+      version = 'v2.11',
+    } = this.props
+    if (!appId) {
+      throw new Error(`appId is required`)
+    }
+    return [
+      <script dangerouslySetInnerHTML={{
+        __html: `
 function withFBImpl (callback) {
   if(withFBImpl.loaded){
     callback(window.FB)
@@ -52,9 +54,10 @@ setTimeout(function () {
   }(document, 'script', 'facebook-jssdk'));
 }, 100);
 `,
-            }}
-            key='s1'/>
-  ]
+      }}
+              key='s1'/>
+    ]
+  }
 }
 
 export default TheFBScript
