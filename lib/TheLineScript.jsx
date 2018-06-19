@@ -14,4 +14,4 @@ class TheLineScript extends React.Component {
   }
 }
 
-module.exports = TheLineScript
+export default TheLineScript
