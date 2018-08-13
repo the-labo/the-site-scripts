@@ -12,10 +12,9 @@ import TheLineScript from './TheLineScript'
 import TheTWTTRScript from './TheTWTTRScript'
 
 export {
-  TheAMZAdScript,
-  TheFBScript,
-  TheGTagScript,
-  TheLineScript,
-  TheTWTTRScript,
+ TheAMZAdScript,
+ TheFBScript,
+ TheGTagScript,
+ TheLineScript,
+ TheTWTTRScript,
 }
-
