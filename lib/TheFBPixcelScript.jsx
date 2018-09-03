@@ -28,11 +28,19 @@ class TheFBPixcelScript extends React.Component {
           s.parentNode.insertBefore(t,s)}(window,document,'script',
         'https://connect.facebook.net/${locale}/fbevents.js');
         fbq('init', '${pixcelId}');
+        fbq('track', 'PageView');
         `,
         }}
                 key='s01'>
         </script>
       ),
+      (
+        <noscript key='s02'>
+          <img height='1'
+               src={`https://www.facebook.com/tr?id=${pixcelId}&ev=PageView&noscript=1`}
+               width='1'/>
+        </noscript>
+      )
     ]
   }
 }
