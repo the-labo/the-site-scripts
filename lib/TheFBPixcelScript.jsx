@@ -10,6 +10,7 @@ class TheFBPixcelScript extends React.Component {
   render () {
     const {
       className,
+      disablePushState = false,
       locale = 'en_US',
       pixcelId,
       version = '2.0',
@@ -32,6 +33,7 @@ class TheFBPixcelScript extends React.Component {
         'https://connect.facebook.net/${locale}/fbevents.js');
         fbq('init', '${pixcelId}');
         fbq('track', 'PageView');
+        fbq.disablePushState = ${String(disablePushState)};
         `,
                 }}
                 key='s01'>
