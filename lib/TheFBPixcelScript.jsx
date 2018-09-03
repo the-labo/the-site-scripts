@@ -31,9 +31,9 @@ class TheFBPixcelScript extends React.Component {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window,document,'script',
         'https://connect.facebook.net/${locale}/fbevents.js');
-        fbq('init', '${pixcelId}');
-        fbq('track', 'PageView');
         fbq.disablePushState = ${String(disablePushState)};
+        fbq('init', '${pixcelId}');
+        !fbq.disablePushState && fbq('track', 'PageView');
         `,
                 }}
                 key='s01'>
