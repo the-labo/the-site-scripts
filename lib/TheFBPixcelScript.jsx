@@ -3,11 +3,13 @@
  */
 'use strict'
 
+import c from 'classnames'
 import React from 'react'
 
 class TheFBPixcelScript extends React.Component {
   render () {
     const {
+      className,
       locale = 'en_US',
       pixcelId,
       version = '2.0',
@@ -17,8 +19,9 @@ class TheFBPixcelScript extends React.Component {
     }
     return [
       (
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <script className={c('the-fb-pixcel-script', className)}
+                dangerouslySetInnerHTML={{
+                  __html: `
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -30,7 +33,7 @@ class TheFBPixcelScript extends React.Component {
         fbq('init', '${pixcelId}');
         fbq('track', 'PageView');
         `,
-        }}
+                }}
                 key='s01'>
         </script>
       ),
